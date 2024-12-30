@@ -1,0 +1,4649 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/bosh#"
+     xml:base="http://purl.org/bosh"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://purl.org/bosh">
+        <terms:created>2021-07-14</terms:created>
+        <terms:creator xml:lang="en">Amelie Gyrard</terms:creator>
+        <terms:creator xml:lang="en">Mahda Noura</terms:creator>
+        <terms:creator xml:lang="en">Ramesh Gowtham</terms:creator>
+        <terms:creator xml:lang="en">Vamsee Krishna Kiran Muppavarapu</terms:creator>
+        <terms:description xml:lang="en">Ontology covering the concepts related to smart home and smart building domains. Ontology contains sensors, actuators, building entities, measurements and so on.</terms:description>
+        <terms:modified>2021-11-30</terms:modified>
+        <terms:title xml:lang="en">Smart Home and Building Ontology (BOSH)</terms:title>
+        <rdfs:comment xml:lang="en">Smart Home and Building Upper Ontology developed as part of PhD research work.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#isDefinedBy -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#equivalentClass -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#equivalentClass"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/bosh#belongsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/bosh#belongsTo">
+        <rdfs:domain rdf:resource="http://purl.org/bosh#Control"/>
+        <rdfs:range rdf:resource="http://purl.org/bosh#Device"/>
+        <rdfs:range rdf:resource="http://purl.org/bosh#SecuritySystem"/>
+        <rdfs:comment xml:lang="en">Property used to map the controls like switches, buttons etc with the devices.</rdfs:comment>
+        <rdfs:label xml:lang="en">belongs to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/bosh#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/bosh#contains">
+        <rdfs:domain rdf:resource="http://purl.org/bosh#BuildingEnvironment"/>
+        <rdfs:range rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:range rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+        <rdfs:range rdf:resource="http://purl.org/bosh#BuildingEnvironment"/>
+        <rdfs:range rdf:resource="http://purl.org/bosh#Device"/>
+        <rdfs:range rdf:resource="http://purl.org/bosh#SecuritySystem"/>
+        <rdfs:comment xml:lang="en">This property is used to map all building related items.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/bosh#hasActuator -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/bosh#hasActuator">
+        <rdfs:domain rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:domain rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+        <rdfs:range rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:comment xml:lang="en">Property used to map actuators with the respective classes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Actuator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/bosh#hasDomainOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/bosh#hasDomainOfInterest">
+        <rdfs:range rdf:resource="http://purl.org/bosh#ApplicationDomain"/>
+        <rdfs:comment xml:lang="en">This property is used to classify devices by DomainOfInterest (e.g., blood pressure sensor is used in healthcare).</rdfs:comment>
+        <rdfs:label xml:lang="en">has Domain Of Interest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/bosh#hasMeasurementType -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/bosh#hasMeasurementType">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasMeasurementType"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/bosh#MeasurementType"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Each sensing device can have a different sensing mechanism which may result in different kinds of sensor data. This property links observation of the sensor to the associated MeasurementType.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Measurement Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/bosh#hasSensor -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/bosh#hasSensor">
+        <rdfs:domain rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:domain rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+        <rdfs:range rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Property used to map sensors with the respective classes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Sensor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Actuator -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Actuator">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Appliances -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Appliances">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Building -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Building">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#BuildingEnvironment -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#BuildingEnvironment">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#BuildingEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#CoffeeMaker -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#CoffeeMaker">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#CoffeeMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Communication -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Communication">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Computer -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Computer">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Computer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Control -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Control">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Door -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Door">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Door"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#DoorSensor -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#DoorSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#DoorStateSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Environment -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Environment">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Fridge -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Fridge">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Freezer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#GasMeter -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#GasMeter">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#GasMeter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#HVACSystem -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#HVACSystem">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#HVAC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Heater -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Heater">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Heater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#HumiditySensor -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#HumiditySensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#HumiditySensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Lamp -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Lamp">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Lamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#NetworkComponent -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#NetworkComponent">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#NetworkComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#SecuritySystem -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#SecuritySystem">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#SecuritySystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Sensor -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Sensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Siren -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Siren">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Siren"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#SmartWasteBin -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#SmartWasteBin">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#SmartWasteBin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#SmokeSensor -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#SmokeSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#SmokeDetector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#State -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#State">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Switch -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Switch">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Switch"/>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#TemperatureSensor -->
+
+
+    <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#TemperatureSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#TemperatureSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Acceleration -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Acceleration">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">The rate of change of the velocity of a particle with respect to time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Acceleration</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AccelerationInstantaneous -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AccelerationInstantaneous">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Acceleration"/>
+        <rdfs:comment xml:lang="en">The acceleration at a given instant of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Instantaneous Acceleration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Accelerometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Accelerometer">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Accelerometer"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"> Accelerometers are used to automatically determine the orientation in which the user is holding the IoT Object (portrait or landscape)</rdfs:comment>
+        <rdfs:label xml:lang="en">Accelerometer</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://casas.wsu.edu/owl/cose.owl#Accelerometer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AccessControlSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AccessControlSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SecuritySystem"/>
+        <rdfs:comment xml:lang="en">System that controls access to certain devices, environment or places.</rdfs:comment>
+        <rdfs:label xml:lang="en">Access Control System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ActuatingDevice -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ActuatingDevice">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Actuator"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Device"/>
+        <rdfs:comment xml:lang="en">Device that can actuate over an object or QuantityKind (e.g., switch on/off the light).</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuating Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AirConditioner -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AirConditioner">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#AirConditioner"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#AirConditioningSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the air conditioner.</rdfs:comment>
+        <rdfs:label xml:lang="en">Air Conditioner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AirConditioningSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AirConditioningSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#HVAC"/>
+        <rdfs:comment xml:lang="en">A conditioning system/utility to keep a room/building cool or dry.</rdfs:comment>
+        <rdfs:label xml:lang="en">Air Conditioning System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AirFlowSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AirFlowSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device used to detect the Air Flow.</rdfs:comment>
+        <rdfs:label xml:lang="en">Air Flow Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AirHumiditySensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AirHumiditySensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#HumiditySensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Sensor used to measure air humidity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Air Humidity Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AirPollution -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AirPollution">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Usually measured using Air Quality Index (AQI), it is the measure of Air Pollution in the environment. It is similar to Air Quality.</rdfs:comment>
+        <rdfs:label xml:lang="en">Air Pollution Quantity Kind</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AirPollutionSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AirPollutionSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#AirPollutantSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Air Pollution Sensor are devices that detect and monitor the presence of air pollution in the surrounding area.</rdfs:comment>
+        <rdfs:label xml:lang="en">Air Pollution Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AirQuality -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AirQuality">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Usually measured using an air quality index (AQI) that is a number used by government agencies to communicate to the public how polluted the air currently is or how polluted it is forecast to become. Different countries have their own air quality indices, corresponding to different national air quality standards. It is the measure of Air Quality of the environment. It is similar to Air Pollution. (Source Wikipedia).</rdfs:comment>
+        <rdfs:label xml:lang="en">Air Quality Quantity Kind</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AirTemperature -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AirTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Temperature"/>
+        <rdfs:comment xml:lang="en">The temperature of the air that would be indicated by a thermometer exposed to the air at a location sheltered from direct solar radiation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Air Temperature, Weather Temperature, Ambient Temperature</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://openiot.eu/ontology/ns/AirTemperature"/>
+        <rdfs:seeAlso rdf:resource="http://paul.staroch.name/thesis/SmartHomeWeather.owl#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AirThermometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AirThermometer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Thermometer"/>
+        <rdfs:comment xml:lang="en">Device to measure the Air temperature of either indoor or outdoor atmosphere.</rdfs:comment>
+        <rdfs:label xml:lang="en">Air Thermometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Alarm -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Alarm">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Siren"/>
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#AlarmSystem"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the alarm system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alarm System Actuating Device</rdfs:label>
+        <skos:altLabel xml:lang="en">Siren</skos:altLabel>
+        <skos:altLabel xml:lang="en">Warning Alarm</skos:altLabel>
+        <skos:altLabel xml:lang="en">Warning Alert</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Ampere -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Ampere">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">The ampere is the SI unit for measuring an electric current which is the flow of electric charges through a surface at the rate of one coulomb per second.The ampere is the SI unit for measuring an electric current which is the flow of electric charges through a surface at the rate of one coulomb per second.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ampere (A)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/unit.owl#Ampere"/>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/unit#ampere"/>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#ampere"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AngularSpeed -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AngularSpeed">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">It is the rate of change of angular displacement and is a vector quantity (more precisely, a pseudovector) that specifies the angular speed (rotational speed) of an object and the axis about which the object is rotating. (Source Wikipedia).</rdfs:comment>
+        <rdfs:label xml:lang="en">Angular Speed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Appliance -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Appliance">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">An electical/electronic or mechanical house hold machine that can achieve a function such as cleaning, cooking, washing etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Appliance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ApplicationDomain -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ApplicationDomain">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#DomainOfInterest"/>
+        <rdfs:comment xml:lang="en">Application Domain for example: smart home, environment, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Application Domain</rdfs:label>
+        <skos:altLabel xml:lang="en">Domain of Interest</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AtmosphericPressure -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AtmosphericPressure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Pressure"/>
+        <rdfs:comment xml:lang="en">The pressure exerted by the atmosphere as a consequence of gravitational attraction exerted upon the column of air lying directly above the point in question.</rdfs:comment>
+        <rdfs:label xml:lang="en">Atmospheric Pressure</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://openiot.eu/ontology/ns/AtmospherePressure"/>
+        <rdfs:seeAlso rdf:resource="http://paul.staroch.name/thesis/SmartHomeWeather.owl#AtmosphericPressure"/>
+        <rdfs:seeAlso>http://purl.oclc.org/NET/ssnx/qu/quantity#atmosphericPressure</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#AtmosphericPressureSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#AtmosphericPressureSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#AtmosphericPressureSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Atmospheric Pressure Sensor, Barometer or Barometric Pressure Sensor is a scientific instrument used in meteorology to measure atmospheric pressure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Atmospheric Pressure Sensor</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://archive.knoesis.org/research/semsci/application_domain/sem_sensor/ont/weather.owlPressure"/>
+        <rdfs:seeAlso rdf:resource="http://casas.wsu.edu/owl/cose.owl#BarometricPressureSensor"/>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/aws#AtmosphericPressureSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Balcony -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Balcony">
+        <rdfs:comment xml:lang="en">A platform projecting from the wall of a building and surrounded by railing or half wall.</rdfs:comment>
+        <rdfs:label xml:lang="en">Balcony</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Barcode -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Barcode">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SmartTagDevice"/>
+        <rdfs:comment xml:lang="en">A tagging device can be Barcode.</rdfs:comment>
+        <rdfs:label xml:lang="en">Barcode Tagging Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Bathroom -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Bathroom">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Room"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Bathroom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#BatteryLevel -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#BatteryLevel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Measure of the percentage of the battery capacity that remains available.</rdfs:comment>
+        <rdfs:label xml:lang="en">Battery Level Quantity Kind</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/2007/uwa/context/deliveryContext.owl#BatteryLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#BedRoom -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#BedRoom">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Room"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Bedroom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#BluetoothComponent -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#BluetoothComponent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#WirelessComponent"/>
+        <rdfs:comment xml:lang="en">A bluetooth device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bluetooth Component</rdfs:label>
+        <skos:altLabel xml:lang="en">Bluetooth</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#BoardTemperature -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#BoardTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Temperature"/>
+        <rdfs:comment xml:lang="en">Measure of board temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Board Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#BoardThermometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#BoardThermometer">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#BoardThermometer"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Thermometer"/>
+        <rdfs:comment xml:lang="en">Device used to measure board temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Board Thermometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#BodyTemperature -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#BodyTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Temperature"/>
+        <rdfs:comment xml:lang="en">Measure of body temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Body Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Boiler -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Boiler">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Boiler"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the boiler.</rdfs:comment>
+        <rdfs:label xml:lang="en">Boiler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Building -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Building">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#BuildingEnvironment"/>
+        <rdfs:comment xml:lang="en">A civil engineering structure with roof and walls, such as house, factory, workplace etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#BuildingAutomation -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#BuildingAutomation">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#BuildingAutomation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ApplicationDomain"/>
+        <rdfs:comment xml:lang="en">Smart Home/Building Automation as an Internet of Things (IoT) applicative domain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Building Automation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://elite.polito.it/ontologies/dogont.owl#BuildingEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#BuildingEnvironment -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#BuildingEnvironment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Environment"/>
+        <rdfs:comment xml:lang="en">A living space or environment for people.</rdfs:comment>
+        <rdfs:label xml:lang="en">Building Environment</rdfs:label>
+        <skos:altLabel xml:lang="en">Building Space</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#BuildingTemperature -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#BuildingTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Temperature"/>
+        <rdfs:comment xml:lang="en">Measure of building or room temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Building/Room Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Button -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Button">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Control"/>
+        <rdfs:comment xml:lang="en">A button to turn on or off a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Button</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#CO2 -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#CO2">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Carbon Dioxide (CO2) measure in the atmosphere.</rdfs:comment>
+        <rdfs:label xml:lang="en">Carbon Dioxide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#CO2Sensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#CO2Sensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#CO2Sensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutionSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Carbon Dioxide (CO2) Sensor used to measure level of CO2 in the atmosphere.</rdfs:comment>
+        <rdfs:label xml:lang="en">Carbon Dioxide (CO2) Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#COSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#COSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#COSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutionSensor"/>
+        <rdfs:comment xml:lang="en">Device to detect Carbon Monoxide (CO) in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Carbon Monoxide (CO) Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#CalibrationSensing -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#CalibrationSensing">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#MeasurementType"/>
+        <rdfs:comment xml:lang="en">If the measurement was taken when the sensor was being calibrated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Calibration Measurement Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Capacitance -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Capacitance">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Measure of the ability of a system to store an electric charge.</rdfs:comment>
+        <rdfs:label xml:lang="en">Capacitance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Ceiling -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Ceiling">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Surface"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Ceiling</rdfs:label>
+        <skos:altLabel xml:lang="en">Roof</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Centimetre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Centimetre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Metre"/>
+        <rdfs:comment xml:lang="en">A metric unit of length, equal to one hundredth of a metre.</rdfs:comment>
+        <rdfs:label xml:lang="en">Centimetre, Centimeter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Clock -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Clock">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">sensor that measures time</rdfs:comment>
+        <rdfs:label xml:lang="en">Clock</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#CoffeeMachine -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#CoffeeMachine">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#CoffeeMachine"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the coffee machine.</rdfs:comment>
+        <rdfs:label xml:lang="en">Coffee Machine</rdfs:label>
+        <skos:altLabel xml:lang="en">Coffee Maker</skos:altLabel>
+        <skos:altLabel xml:lang="en">Coffee Vending Machine</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Command -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Command">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">An instruction or directive that is used to perform a function. Command can be an instruction given via system, action, voice etc. </rdfs:comment>
+        <rdfs:label xml:lang="en">Command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Communication -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Communication">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Communication related properties. Can be wired and also wireless.</rdfs:comment>
+        <rdfs:label xml:lang="en">Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Computer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Computer">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Computer"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:comment xml:lang="en">Actuating devices for Computer or PC.</rdfs:comment>
+        <rdfs:label xml:lang="en">Computer</rdfs:label>
+        <skos:altLabel xml:lang="en">PC</skos:altLabel>
+        <skos:altLabel xml:lang="en">Personal Computer</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Conductivity -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Conductivity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Measure of ability to conduct electricity. It is measured in siemens per metre (S/m).</rdfs:comment>
+        <rdfs:label xml:lang="en">Conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ConductivitySensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ConductivitySensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#ConductivitySensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device used to measure the conductivity of a system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Conductivity Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Control -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Control">
+        <rdfs:comment xml:lang="en">A control panel board that contains switches, buttons, and other controls to turn on or off the applicances.</rdfs:comment>
+        <rdfs:label xml:lang="en">Control Panel</rdfs:label>
+        <skos:altLabel xml:lang="en">Control Panel</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Coordinates -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Coordinates">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Triples for location in the (Latitude, Longitude, Altitude) format.</rdfs:comment>
+        <rdfs:label xml:lang="en">Coordinates</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Count -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Count">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Number of available particular things.</rdfs:comment>
+        <rdfs:label xml:lang="en">Count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#CountPeople -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#CountPeople">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Count"/>
+        <rdfs:comment xml:lang="en">Number of people within a particular area</rdfs:comment>
+        <rdfs:label xml:lang="en">Count People</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#CountPeopleMoving -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#CountPeopleMoving">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#CountPeople"/>
+        <rdfs:comment xml:lang="en">Number of people that moved outside an area towards another area during a time window.</rdfs:comment>
+        <rdfs:label xml:lang="en">Count People Moving</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#CountPeopleStaying -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#CountPeopleStaying">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#CountPeople"/>
+        <rdfs:comment xml:lang="en">Number of people that stayed within an area for more than a threshold of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Count People Staying</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Cupboard -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Cupboard">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Cupboard"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically open/close the cupboard.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cupboard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#CurrentMeter -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#CurrentMeter">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Meter"/>
+        <rdfs:comment xml:lang="en">Meter to record the usage of electricity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Current Meter</rdfs:label>
+        <skos:altLabel xml:lang="en">Electricity Meter</skos:altLabel>
+        <skos:altLabel xml:lang="en">Power Meter</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#CurrentSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#CurrentSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">A current sensor is a device that detects electric current in a wire, and generates a signal proportional to that current.</rdfs:comment>
+        <rdfs:label xml:lang="en">Current Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Curtain -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Curtain">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Curtain"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically open/close the curtain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Curtain Actuating Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Decibel -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Decibel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Decibel is a logarithmic unit used to express the ratio of two values of a physical quantity. It is often used to measure sound level.</rdfs:comment>
+        <rdfs:label xml:lang="en">Decibel (dB)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/unit#decibel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DecibelMilliwatt -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DecibelMilliwatt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Decibel"/>
+        <rdfs:comment xml:lang="en">It describes power ratio in decibels of the measured power referenced to one milliwatt.</rdfs:comment>
+        <rdfs:label xml:lang="en">Decibel Milliwatt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Degree -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Degree">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Degree.</rdfs:comment>
+        <rdfs:label xml:lang="en">Degree</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DegreeCelsius -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DegreeCelsius">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Degree"/>
+        <rdfs:comment xml:lang="en">A temperature unit which is equal to one kelvin degree. However, they have their zeros at different points. The centigrade scale has its zero at 273.15 K.</rdfs:comment>
+        <rdfs:label xml:lang="en">Degree Celsius</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/unit.owl#DegreeCelsius"/>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#degreeC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DegreeFahrenheit -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DegreeFahrenheit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Degree"/>
+        <rdfs:comment xml:lang="en">Measurement Unit to represent temperature on the Fahrenheit scale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Degree Fahrenheit</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://archive.knoesis.org/research/semsci/application_domain/sem_sensor/ont/weather.owlfahrenheit"/>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#degreeF"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DeltaDewPoint -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DeltaDewPoint">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#DewPoint"/>
+        <rdfs:comment xml:lang="en">Difference between Dewpoint and surface temperatures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Delta Dew Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DeltaDewPointSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DeltaDewPointSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#DeltaDewPointSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device that measures the difference between Dewpoint and surface temperatures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Delta Dew Point Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Device -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Device">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:comment xml:lang="en"> A device is a physical piece of technology - a system in a box. Devices may of course be built of smaller devices and software components.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DewPoint -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DewPoint">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">It is the temperature to which air must be cooled at constant pressure to condense to form liquid.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dew Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DewPointSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DewPointSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#DewPointSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device that measures dew point.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dew Point Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DewPointTemperature -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DewPointTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#DewPoint"/>
+        <rdfs:comment xml:lang="en">The temperature at which dew forms and is a measure of atmospheric moisture. It is the temperature to which air must be cooled at constant pressure and water content to reach saturation. A higher dew point indicates more moisture in the air; a dew point greater than 20 Degree C (68 Degree F) is considered uncomfortable and greater than 22 Degree C (72 Degree F) is considered to be extremely humid.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dew Point Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DiningRoom -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DiningRoom">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Room"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Dining Room</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DishWasher -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DishWasher">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#DishWasher"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the dishwasher.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dish Washer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Distance -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Distance">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Measure of how far apart objects are.</rdfs:comment>
+        <rdfs:label xml:lang="en">Distance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DistanceSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DistanceSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#DistanceSensor"/>
+        <rdfs:comment xml:lang="en">Distance Sensor is used to detect distance between two entities for example:  the  distance between two buildings. Distance sensor can be a laser.</rdfs:comment>
+        <rdfs:label xml:lang="en">Distance Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DomainOfInterest -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DomainOfInterest"/>
+    
+
+
+    <!-- http://purl.org/bosh#Door -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Door">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Door"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically open/close the door.</rdfs:comment>
+        <rdfs:label xml:lang="en">Door</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DoorStateSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DoorStateSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#DoorStateSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">This sensor detects if a door is in the state of OPEN or CLOSED.</rdfs:comment>
+        <rdfs:label xml:lang="en">Door State Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DoorStatus -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DoorStatus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Describes if a door is OPEN or CLOSED.</rdfs:comment>
+        <rdfs:label xml:lang="en">Door Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Drawer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Drawer">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Drawer"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically open/close the drawer.</rdfs:comment>
+        <rdfs:label xml:lang="en">Drawer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#DustSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#DustSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">A sensing device that measures dust particle concentration.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dust Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ElectricCharge -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ElectricCharge">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">It is the physical property of matter that causes it to experience a force when placed in an electromagnetic field. (Source Wikipedia).</rdfs:comment>
+        <rdfs:label xml:lang="en">Electric Charge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ElectricField -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ElectricField">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Electric field is the electric force per unit charge.</rdfs:comment>
+        <rdfs:label xml:lang="en">Electric Field</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://qudt.org/vocab/quantity#ElectricField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ElectricPotential -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ElectricPotential">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Electric potential is the potential energy per unit charge associated with static (time-invariant) electric field.</rdfs:comment>
+        <rdfs:label xml:lang="en">Electric Potential</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricPotential"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ElectricalResistance -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ElectricalResistance">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">The electrical resistance of an electrical conductor is the opposition to the passage of an electric current through that conductor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Electrical Resistance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ElectricalSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ElectricalSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#ElectricalSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Sensor that measures the changes in electrical or magnetic signals based on an environmental input.</rdfs:comment>
+        <rdfs:label xml:lang="en">Electrical Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Energy -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Energy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Energy is the property that must be transferred to an object in order to perform work on. (Source Wikipedia).</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#EnergyMeter -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#EnergyMeter">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#EnergyMeter"/>
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#EnergyMeter"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Meter"/>
+        <rdfs:comment xml:lang="en">Sensor to measure power or energy consumption.</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy Meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Environment -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Environment">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Environment"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ApplicationDomain"/>
+        <rdfs:comment xml:lang="en">Environment (earthquake, flooding, fire, pollution) as an Internet of Things (IoT) applicative domain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#FallDetector -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#FallDetector">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#FallDetector"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Device to detect is a person has fallen.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fall Detector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Fan -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Fan">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Fan"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically on/off the Fan.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fan</rdfs:label>
+        <skos:altLabel xml:lang="en">Ceiling Fan</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#FillLevel -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#FillLevel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Property used to determine the level a certain object such as waste bin is filled upto.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fill Level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#FillLevelGasTank -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#FillLevelGasTank">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#FillLevel"/>
+        <rdfs:comment xml:lang="en">Ratio of volume of combustible exhaust fluid to the total volume of diesel exhaust fluid storage container.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fill Level Gas Tank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#FillLevelWasteContainer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#FillLevelWasteContainer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#FillLevel"/>
+        <rdfs:comment xml:lang="en">Ratio between the current filleage level and the total capacity of a waste container.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fill Level Waste Container</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#FireSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#FireSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SecuritySystem"/>
+        <rdfs:comment xml:lang="en">System that detects the presence of Fire.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fire System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Flat -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Flat">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#BuildingEnvironment"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Flat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#FloodSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#FloodSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SecuritySystem"/>
+        <rdfs:comment xml:lang="en">System that detects the presence of Flood.</rdfs:comment>
+        <rdfs:label xml:lang="en">Flood System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Floor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Floor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Surface"/>
+        <rdfs:comment xml:lang="en">Floor in a building or house.</rdfs:comment>
+        <rdfs:label xml:lang="en">Floor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Freezer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Freezer">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Freezer"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the freezer.</rdfs:comment>
+        <rdfs:label xml:lang="en">Freezer</rdfs:label>
+        <skos:altLabel xml:lang="en">Fridge</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Frequency -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Frequency">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Frequency is the number of occurrences of a repeating event per unit time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#FrequencySensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#FrequencySensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#FrequencySensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device used to detect the frequency.</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequency Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#GPSSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#GPSSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#GPSSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device that allows an object to localize itself.</rdfs:comment>
+        <rdfs:label xml:lang="en">GPS Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Garage -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Garage">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#BuildingEnvironment"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Garage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Gas -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Gas">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Gas"/>
+        <rdfs:comment xml:lang="en">House Hold Commodity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#GasDetectorSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#GasDetectorSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#GasDetector"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GasSystem"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device that detects the presence of gases in an area, often as part of a safety system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gas Detector Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#GasMeter -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#GasMeter">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Meter"/>
+        <rdfs:comment xml:lang="en">Device that can record the usage of Gas in House environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gas Meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#GasSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#GasSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SecuritySystem"/>
+        <rdfs:comment xml:lang="en">System that detects the presence of Gas.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gas System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#GaseousPollutantSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#GaseousPollutantSensor"/>
+    
+
+
+    <!-- http://purl.org/bosh#GaseousPollutionSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#GaseousPollutionSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#GaseousPollutantSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#AirPollutionSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GasSystem"/>
+        <rdfs:comment xml:lang="en">Device used to detect poisonous gaseous in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gaseous Pollution Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Gateway -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Gateway">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#NetworkComponent"/>
+        <rdfs:comment xml:lang="en">A device used in communications that allow data to flow from one discrete network to another.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gateway</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Gram -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Gram">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment>It is a metric system unit of mass</rdfs:comment>
+        <rdfs:label>Gram (g)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#GramPerCubicMetre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#GramPerCubicMetre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It is defined by mass in grams divided by volume in cubic metres.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gram Per Cubic Metre, Gram Per Cubic Meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#GramPerLitre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#GramPerLitre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It shows how many grams of a certain substance are present in one litre of a usually liquid or gaseous mixture.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gram Per Litre, Gram Per Liter (g/L)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#GyroscopeSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#GyroscopeSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#GyroscopeSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A gyroscope is a device for measuring or maintaining orientation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gyroscope Sensor</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://casas.wsu.edu/owl/cose.owl#Gyroscope"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#H2SSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#H2SSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutionSensor"/>
+        <rdfs:comment xml:lang="en">Device used to measure of hydrogen sulphide in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">H2S Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#HVAC -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#HVAC">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#HVAC"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Ventilation"/>
+        <rdfs:comment xml:lang="en">Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor comfort</rdfs:comment>
+        <rdfs:label xml:lang="en">HVAC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Heater -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Heater">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Heating"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#HeatingSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the heater.</rdfs:comment>
+        <rdfs:label xml:lang="en">Heater</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#HeatingSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#HeatingSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#HVAC"/>
+        <rdfs:comment xml:lang="en">A heating system/utility to warm up a room or building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Heating System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Hertz -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Hertz">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">The SI unit of frequency, equal to one cycle per second.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hertz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Hour -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Hour">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SecondTime"/>
+        <rdfs:comment xml:lang="en">Hour of the day.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hour</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#hour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#HouseholdApplianceTemperature -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#HouseholdApplianceTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Temperature"/>
+        <rdfs:comment xml:lang="en">Measure of Household Appliance Temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Household Appliance Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#HumanPresenceDetector -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#HumanPresenceDetector">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#PresenceDetector"/>
+        <rdfs:comment xml:lang="en">Device used to detect if an object (vehicle, room, place, etc.) is occupied by Human.</rdfs:comment>
+        <rdfs:label xml:lang="en"> Human Presence Detector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Humidity -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Humidity">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Humidity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">A quantity representing the amount of water vapour in the atmosphere or in a gas.</rdfs:comment>
+        <rdfs:label xml:lang="en">Humidity</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://elite.polito.it/ontologies/dogont.owl#HumidityMeasurementMNotification"/>
+        <rdfs:seeAlso rdf:resource="http://openiot.eu/ontology/ns/AtmosphereHumidity"/>
+        <rdfs:seeAlso rdf:resource="http://paul.staroch.name/thesis/SmartHomeWeather.owl#Humidity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#HumiditySensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#HumiditySensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Humidity sensor or hygrometer is an instrument used for measuring the moisture  in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Humidity Sensor</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/aws#HumiditySensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Hydrophone -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Hydrophone">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Hydrophone"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">A hydrophone is a microphone designed to be used underwater for recording or listening to underwater sound.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hydrophone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Illuminance -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Illuminance">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Illuminance is the total luminous flux incident on a surface, per unit area.</rdfs:comment>
+        <rdfs:label xml:lang="en">Illuminance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ImageSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ImageSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#ImageSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Sensor that detects and conveys the information that constitutes an image.</rdfs:comment>
+        <rdfs:label xml:lang="en">Image Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Inch -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Inch">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Metre"/>
+        <rdfs:comment xml:lang="en">Length in inches.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Index -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Index">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Arbitrary indirect reference which should be translated into meaningful measurements by using the corresponding decoding algorithm detailed in the resource description. In this case the returned values can only take certain values from a finite set.</rdfs:comment>
+        <rdfs:label xml:lang="en">Index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Kelvin -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Kelvin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Kelvin is a unit of measurement for temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Kelvin, Degree Kelvin</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#kelvin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#KiloWattHour -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#KiloWattHour">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Measure of electrical energy equivalent to a power consumption of one thousand watts for one hour.</rdfs:comment>
+        <rdfs:label xml:lang="en">Kilo Watt Hour</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/unit.owl#KiloWatthour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#KilobitsPerSecond -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#KilobitsPerSecond">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It is a unit of data transfer rate equal to: 1,000 bits per second.</rdfs:comment>
+        <rdfs:label xml:lang="en">Kilobits Per Second</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Kilogram -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Kilogram">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Gram"/>
+        <rdfs:comment xml:lang="en">The SI unit of mass, it is equal to the mass of the international prototype of the kilogram.</rdfs:comment>
+        <rdfs:label xml:lang="en">Kilogram (kg)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/unit#kilogram"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#KilogramPerCubicMetre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#KilogramPerCubicMetre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GramPerCubicMetre"/>
+        <rdfs:comment xml:lang="en">It is SI derived unit of density, defined by mass in kilograms divided by volume in cubic metres.</rdfs:comment>
+        <rdfs:label xml:lang="en">Kilogram Per Cubic Metre, Kilogram Per Cubic Meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Kilometre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Kilometre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Metre"/>
+        <rdfs:comment xml:lang="en">A metric unit of measurement equal to 1,000 metres (approx 0.62 miles).</rdfs:comment>
+        <rdfs:label xml:lang="en">Kilometre, Kilometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Kitchen -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Kitchen">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Room"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Kitchen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Lamp -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Lamp">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Lamp"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the lamp.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lamp</rdfs:label>
+        <skos:altLabel xml:lang="en">Bulb</skos:altLabel>
+        <skos:altLabel xml:lang="en">On Off Lamp</skos:altLabel>
+        <skos:altLabel xml:lang="en">Simple Lamp</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#LampHolder -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#LampHolder">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Lamp"/>
+        <rdfs:comment xml:lang="en">A holder to hold a lamp or bulb.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lamp Holder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#LightSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#LightSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#LightSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Light/Illuminance Sensor is used to adjust the brightness of the surface.</rdfs:comment>
+        <rdfs:label xml:lang="en">Light Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Litre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Litre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">A metric unit of capacity defined as the volume of one kilogram of water under standard conditions. It is equal to 1,000 cubic centimetres.</rdfs:comment>
+        <rdfs:label xml:lang="en">Litre, Liter</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/unit#litre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#LivingRoom -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#LivingRoom">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Room"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Living Room</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Lobby -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Lobby">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Room"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Lobby</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Lumen -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Lumen">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">The SI unit of luminous flux, equal to the amount of light emitted per second in a unit solid angle of one steradian from a uniform source of one candela.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lumen (lm)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/unit#lumen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#LuminousFlux -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#LuminousFlux">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Luminous Flux is the measure of the perceived power of light.</rdfs:comment>
+        <rdfs:label xml:lang="en">Luminous Flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#LuminousIntensity -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#LuminousIntensity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en"> It is a measure of the wavelength-weighted power emitted by a light source in a particular direction per unit solid angle, based on the luminosity function, a standardized model of the sensitivity of the human eye. The SI unit of luminous intensity is the candela (cd), an SI base unit. (Source Wikipedia)</rdfs:comment>
+        <rdfs:label xml:lang="en">Luminous Intensity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Lux -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Lux">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">The SI unit of illuminance, equal to one lumen per square metre.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lux (lx)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/unit.owl#Lux"/>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#lux"/>
+        <rdfs:seeAlso>http://purl.oclc.org/NET/ssnx/qu/unit#lux</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MagneticField -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MagneticField">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">A region around a magnetic material or a moving electric charge within which the force of magnetism acts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Magnetic Field</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MagneticFluxDensity -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MagneticFluxDensity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">It is the magnetic flux  through a surface is the surface integral of the normal component of the magnetic field (B) passing through that surface. The SI unit of magnetic flux is the weber (Wb). (Source Wikipedia).</rdfs:comment>
+        <rdfs:label xml:lang="en">Magnetic Flux Density</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Magnetometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Magnetometer">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Magnetometer"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A magnetometer is an device that measures magnetism—either magnetization of magnetic material like a ferromagnet, or the strength and, in some cases, direction of the magnetic field at a point in space. (Source Wikipedia).</rdfs:comment>
+        <rdfs:label xml:lang="en">Magnetometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Mass -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Mass">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Mass is a property of a physical body. It is the measure of an object&apos;s resistance to acceleration when a net force is applied.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mass</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/quantity#mass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MeasurementType -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MeasurementType">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Measurement"/>
+        <rdfs:comment xml:lang="en">Type of Measurement done using a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Measurement Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Meter -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Meter">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Meter"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">A device that can record and display a particular quanitty in human readable format.</rdfs:comment>
+        <rdfs:label xml:lang="en">Meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MethaneSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MethaneSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutantSensor"/>
+        <rdfs:comment xml:lang="en">Device used to detect Methane in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Methane (CH4) Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Metre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Metre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It is the unit of length.</rdfs:comment>
+        <rdfs:label xml:lang="en">Metre, Meter</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/unit.owl#Meter"/>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#meter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MetrePerSecond -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MetrePerSecond">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">A speed/velocity unit which is equal to the speed of an object traveling 1 metre distance in one second.</rdfs:comment>
+        <rdfs:label xml:lang="en">Metre Per Second, Meter Per Second  (m/s)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/unit.owl#MeterPerSecond"/>
+        <rdfs:seeAlso>http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MetrePerSecondSquare -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MetrePerSecondSquare">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It is the unit of acceleration.</rdfs:comment>
+        <rdfs:label xml:lang="en">Metre Per Second Square, Meter Per Second Square</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecondSquared"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Microampere -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Microampere">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Ampere"/>
+        <rdfs:comment xml:lang="en">It is a unit of electric current, or amount of electric charge per second.</rdfs:comment>
+        <rdfs:label xml:lang="en">Microampere (uA)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Microgram -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Microgram">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Gram"/>
+        <rdfs:comment xml:lang="en">It is a unit of mass equal to one billionth (1×10^−9) of a kilogram.</rdfs:comment>
+        <rdfs:label xml:lang="en">Microgram (ug)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MicrogramPerCubicMetre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MicrogramPerCubicMetre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GramPerCubicMetre"/>
+        <rdfs:comment xml:lang="en">Microgram per cubic metre is a unit of density defined as microgram divided by cubic metre. Milligram per cubic metre is a derived unit in the International System of Units.</rdfs:comment>
+        <rdfs:label xml:lang="en">Microgram Per Cubic Metre, Microgram Per Cubic Meter</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/unit#microgramPerCubicMetre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Microwatt -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Microwatt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Watt"/>
+        <rdfs:comment xml:lang="en">It is a unit of power.</rdfs:comment>
+        <rdfs:label xml:lang="en">Microwatt (uW)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MicrowattPerSquareCentimetre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MicrowattPerSquareCentimetre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#WattPerSquareMetre"/>
+        <rdfs:comment xml:lang="en">It is one of the unit for radiative and other energy fluxes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Microwatt Per Square Centimetre, Microwatt Per Square Centimeter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Microwave -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Microwave">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Microwave"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the Microwave.</rdfs:comment>
+        <rdfs:label xml:lang="en">Microwave</rdfs:label>
+        <skos:altLabel xml:lang="en">Microwave Oven</skos:altLabel>
+        <skos:altLabel xml:lang="en">Oven</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Milliampere -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Milliampere">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Ampere"/>
+        <rdfs:comment xml:lang="en">One thousandth of an ampere.</rdfs:comment>
+        <rdfs:label xml:lang="en">Milliampere (mA)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Milligram -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Milligram">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Gram"/>
+        <rdfs:comment xml:lang="en">One thousandth of a gram.</rdfs:comment>
+        <rdfs:label xml:lang="en">Milligram (mg)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MilligramPerCubicMetre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MilligramPerCubicMetre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GramPerCubicMetre"/>
+        <rdfs:comment xml:lang="en">It is a density measurement unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Milligram Per Cubic Metre, Milligram Per Cubic Meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MilligramPerSquareMetre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MilligramPerSquareMetre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">A dose unit which is equal to 1 milligram of a substance per square metre of surface area of the recipient subject.</rdfs:comment>
+        <rdfs:label xml:lang="en">Milligram Per Square Metre, Milligram Per Square Meter</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/unit#milligramPerSquareMetre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Millilitre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Millilitre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Litre"/>
+        <rdfs:comment xml:lang="en">One thousandth of a litre (0.002 pint).</rdfs:comment>
+        <rdfs:label xml:lang="en">Millilitre, Milliliter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Millimetre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Millimetre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Metre"/>
+        <rdfs:comment xml:lang="en">One thousandth of a metre (0.039 in).</rdfs:comment>
+        <rdfs:label xml:lang="en">Millimetre, Millimeter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Millisecond -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Millisecond">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SecondTime"/>
+        <rdfs:comment xml:lang="en">One thousandth of a second.</rdfs:comment>
+        <rdfs:label xml:lang="en">Millisecond</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Millivolt -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Millivolt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Volt"/>
+        <rdfs:comment xml:lang="en">One thousandth of a volt.</rdfs:comment>
+        <rdfs:label xml:lang="en">Millivolt (mV)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MillivoltPerMetre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MillivoltPerMetre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It is a measure of the intensity of the signal of a radio transmitter.</rdfs:comment>
+        <rdfs:label xml:lang="en">Millivolt Per Metre, Millivolt Per Meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Milliwatt -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Milliwatt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Watt"/>
+        <rdfs:comment xml:lang="en">A unit of power equal to one thousandth of a watt.</rdfs:comment>
+        <rdfs:label xml:lang="en">Milliwatt (mW)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#MinuteTime -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#MinuteTime">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SecondTime"/>
+        <rdfs:comment xml:lang="en">A unit of time equal to 60 seconds or 1/60th of an hour.</rdfs:comment>
+        <rdfs:label xml:lang="en">Minute Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Mobile -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Mobile">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Communication"/>
+        <rdfs:comment xml:lang="en">A wireless device used for communication between people.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mobile</rdfs:label>
+        <skos:altLabel xml:lang="en">Mobile Phone</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#NFC -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#NFC">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#NFC"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SmartTagDevice"/>
+        <rdfs:comment xml:lang="en">A tagging device can be NFC (Near Field Communication).</rdfs:comment>
+        <rdfs:label xml:lang="en">NFC</rdfs:label>
+        <skos:altLabel xml:lang="en">Near Field Communication</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#NH3Sensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#NH3Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutionSensor"/>
+        <rdfs:comment xml:lang="en">Device used to detect NH3 level in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">NH3 Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#NO2Sensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#NO2Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutionSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Sensor detecting levels of Nitrogen Dioxide (NO2) in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Nitrogen Dioxide (NO2) Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#NOSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#NOSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutionSensor"/>
+        <rdfs:comment xml:lang="en">Device used to detect Nitrogen Oxide (NO) in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Nitrogen Oxide (NO) Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#NetworkComponent -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#NetworkComponent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Device"/>
+        <rdfs:comment xml:lang="en">A network device that handles communication through IP protocols.</rdfs:comment>
+        <rdfs:label xml:lang="en">Network Component</rdfs:label>
+        <skos:altLabel xml:lang="en">Network Device</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#NetworkSwitch -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#NetworkSwitch">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#NetworkComponent"/>
+        <rdfs:comment xml:lang="en">A network switch that is used to connect computers.</rdfs:comment>
+        <rdfs:label xml:lang="en">Network Switch</rdfs:label>
+        <skos:altLabel xml:lang="en">Switch</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#O3Sensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#O3Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutionSensor"/>
+        <rdfs:comment xml:lang="en">Device used to detect Ozone (O3) in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ozone (O3) Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#OffState -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#OffState">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#OnOffState"/>
+        <rdfs:comment xml:lang="en">Describes the Off state of a device, sensor or actuator.</rdfs:comment>
+        <rdfs:label xml:lang="en">Off State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Ohm -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Ohm">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Ohm is the unit of electrical resistance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ohm</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#ohm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#OnOffState -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#OnOffState">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#State"/>
+        <rdfs:comment xml:lang="en">Descirbes the On / Off state of a device, sensor or actuator.</rdfs:comment>
+        <rdfs:label xml:lang="en">On Off State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#OnState -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#OnState">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#OnOffState"/>
+        <rdfs:comment xml:lang="en">Describes the On state of a device, sensor or actuator.</rdfs:comment>
+        <rdfs:label xml:lang="en">On State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#OpticalDustSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#OpticalDustSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#DustSensor"/>
+        <rdfs:comment xml:lang="en">A sensing device that measures dust particle concentration using optical sensing mean.</rdfs:comment>
+        <rdfs:label xml:lang="en">Optical Dust Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#OxygenSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#OxygenSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutionSensor"/>
+        <rdfs:comment xml:lang="en">Device used to detect Oxygen (O2) in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Oxygen Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#PH -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#PH">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">It is a numeric scale used to specify the acidity or basicity of an aqueous solution.</rdfs:comment>
+        <rdfs:label xml:lang="en">PH</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#PHSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#PHSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Device used to detect PH level.</rdfs:comment>
+        <rdfs:label xml:lang="en">PH Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#PPM -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#PPM">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It describes the concentration of something in water or soil.</rdfs:comment>
+        <rdfs:label xml:lang="en">PPM (parts per million)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#PartsPerBillion -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#PartsPerBillion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#PPM"/>
+        <rdfs:comment xml:lang="en">It describes the concentration of something in parts per billion parts of water or soil, expressed in any (but common) unit of measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Parts Per Billion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Pascal -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Pascal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Unit for pressure (e.g., atmospheric pressure).</rdfs:comment>
+        <rdfs:label xml:lang="en">Pascal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#PeopleCountSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#PeopleCountSensor"/>
+    
+
+
+    <!-- http://purl.org/bosh#PeopleFlowCountSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#PeopleFlowCountSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#PeopleFlowCountSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#PeopleCountSensor"/>
+        <rdfs:comment xml:lang="en">Device used to count the number of people the moves from an area towards another area during a time window.</rdfs:comment>
+        <rdfs:label xml:lang="en">People Flow Count Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#PeopleStayDurationSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#PeopleStayDurationSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#PeopleStayDurationSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device used to measure the time people stays within an area.</rdfs:comment>
+        <rdfs:label xml:lang="en">People Stay Duration Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Percent -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Percent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It is the amount in or for every hundred.</rdfs:comment>
+        <rdfs:label xml:lang="en">Percent</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.qudt.org/qudt/owl/1.0.0/unit.owl#Percent"/>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#percent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Place -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Place">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#DomainOfInterest"/>
+        <rdfs:comment xml:lang="en">Location, Place, GPS coordinates as an Internet of Things (IoT) applicative domain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Place DOI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Pound -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Pound">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Gram"/>
+        <rdfs:comment xml:lang="en">A unit of weight equal to 16 oz. 1 pound= 453.592 grams</rdfs:comment>
+        <rdfs:label xml:lang="en">Pound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Power -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Power">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Power"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">It is the rate, per unit time, at which electrical energy is transferred by an electric circuit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Power</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Presence -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Presence">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Measure to know if an object is present. It is usually boolean.</rdfs:comment>
+        <rdfs:label xml:lang="en">Presence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#PresenceDetector -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#PresenceDetector">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#PresenceDetector"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device used to detect if on object is occupied or not.</rdfs:comment>
+        <rdfs:label xml:lang="en">Presence Detector</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://casas.wsu.edu/owl/cose.owl#PassiveInfraredSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Pressure -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Pressure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">It is the physical force exerted on or against an object by something in contact with it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pressure</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://archive.knoesis.org/research/semsci/application_domain/sem_sensor/ont/sensor-observation.owlPressureProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#PressureSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#PressureSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#PressureSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A device used to detect pressure. For example, it can be attached on the bed to infer if the user is lying, sleeping, sitting, bed occupancy, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pressure Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Printer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Printer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Communication"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#NetworkComponent"/>
+        <rdfs:comment xml:lang="en">Output device that is used for printing content and generally attached to a Computer either wired or wireless.</rdfs:comment>
+        <rdfs:label xml:lang="en">Printer</rdfs:label>
+        <skos:altLabel xml:lang="en">Printing Machine</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Proximity -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Proximity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Measure to detect proximity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Proximity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ProximitySensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ProximitySensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Detect if something is within proximity of a sensor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Proximity Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Pyranometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Pyranometer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SolarRadiationSensor"/>
+        <rdfs:comment xml:lang="en">A sensing device for total solar irradiance on a horizontal surface.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pyranometer</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/aws#Pyranometer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#QRCode -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#QRCode">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SmartTagDevice"/>
+        <rdfs:comment xml:lang="en">A tagging device can be QRCode.</rdfs:comment>
+        <rdfs:label xml:lang="en">QR Code tagging Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#QuantityKind -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#QuantityKind"/>
+    
+
+
+    <!-- http://purl.org/bosh#RFID -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#RFID">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SmartTagDevice"/>
+        <rdfs:comment xml:lang="en">A tagging device can be RFID.</rdfs:comment>
+        <rdfs:label xml:lang="en">RFID Tagging Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#RadiationSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#RadiationSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">A sensing device that can detect radiation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Radiation Sensor</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/aws#RadiationSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Radio -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Radio">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:comment xml:lang="en">A device that can signal and communicate using Radio Waves.</rdfs:comment>
+        <rdfs:label xml:lang="en">Radio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ReactivePower -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ReactivePower">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Power"/>
+        <rdfs:comment xml:lang="en">The portion of electricity that establishes and sustains the electric and magnetic fields of alternating-current equipment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reactive Power</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#ReactivePower"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#RelativeHumidity -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#RelativeHumidity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">The ratio of vapour pressure to saturation vapour pressure, where vapour pressure is the pressure exerted by the molecules of water vapour and saturation vapour pressure is the pressure exerted by molecules of water vapour in AIR that has attained saturation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Relative Humidity</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/property.owl#RelativeHumidity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#RevolutionsPerMinute -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#RevolutionsPerMinute">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Revolutions per minute (abbreviated rpm, RPM, rev/min, r/min) is a measure of the frequency of rotation, specifically the number of rotations around a fixed axis in one minute. It is used as a measure of rotational speed of a mechanical component.</rdfs:comment>
+        <rdfs:label xml:lang="en">Revolutions Per Minute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#RockerSwitch -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#RockerSwitch">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Switch"/>
+        <rdfs:comment xml:lang="en">A switch that has multiple on off states.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rocker Switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Room -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Room">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#BuildingEnvironment"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Room</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#RoomTemperature -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#RoomTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#BuildingTemperature"/>
+        <rdfs:comment xml:lang="en">Temperature of a room.</rdfs:comment>
+        <rdfs:label xml:lang="en">Room Temperature</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://elite.polito.it/ontologies/dogont.owl#TemperatureMeasurementMNotification"/>
+        <rdfs:seeAlso rdf:resource="http://sensormeasurement.appspot.com/home#RoomTemperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#RotationalSpeed -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#RotationalSpeed">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Rotational speed (or speed of revolution) of an object rotating around an axis is the number of turns of the object divided by time, specified as revolutions per minute (rpm), revolutions per second (rev/s), or radians per second (rad/s). (Source Wikipedia)</rdfs:comment>
+        <rdfs:label xml:lang="en">Rotational Speed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Router -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Router">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#NetworkComponent"/>
+        <rdfs:comment xml:lang="en">A device that forwards data packets between computer networks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Router</rdfs:label>
+        <skos:altLabel xml:lang="en">Modem</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SO2Sensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SO2Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutionSensor"/>
+        <rdfs:comment xml:lang="en">Device use to detect Sulphur Dioxide (SO2) level in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sulphur Dioxide (SO2) Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Salinity -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Salinity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">It is the measure of all the salts dissolved in water.</rdfs:comment>
+        <rdfs:label xml:lang="en">Salinity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SaltMeter -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SaltMeter">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Device use to detect salinity of water.</rdfs:comment>
+        <rdfs:label xml:lang="en">Salt Meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Scale -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Scale">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Arbitrary indirect reference which should be translated into meaningful measurements by using the corresponding decoding algorithm detailed in the resource description. In this case the returned values are part of a continuous variable which can take any numeric value.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SecondTime -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SecondTime">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">Qualitatively defined as the second division of the hour by sixty, the first division by sixty being the minute. SI definition of second is &quot;the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium 133 atom.</rdfs:comment>
+        <rdfs:label xml:lang="en">Second Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SecuritySystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SecuritySystem">
+        <rdfs:comment xml:lang="en">Security system for detecting dangerous situation and intrusion.</rdfs:comment>
+        <rdfs:label xml:lang="en">Security System</rdfs:label>
+        <skos:altLabel xml:lang="en">Emergency System</skos:altLabel>
+        <skos:altLabel xml:lang="en">Smart Security System</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Seismometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Seismometer">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Seismometer"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Seismometers are instruments that measure motions of the ground, including those of seismic waves generated by earthquakes, volcanic eruptions, and other seismic sources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Seismometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SensingDevice -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SensingDevice">
+        <owl:equivalentClass rdf:resource="http://purl.org/bosh#Sensor"/>
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Device"/>
+        <rdfs:comment xml:lang="en">A device that can read values by sensing.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensing Device</rdfs:label>
+        <skos:altLabel xml:lang="en">Sensor</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Sensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Sensor">
+        <rdfs:comment xml:lang="en">A device that can sense a value.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ShakeSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ShakeSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#ShakeSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Shake sensor is used to deduce the quality of the road, earthquakes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Shake Sensor</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://casas.wsu.edu/owl/cose.owl#ShakeSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Shower -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Shower">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the shower.</rdfs:comment>
+        <rdfs:label xml:lang="en">Shower Actuating Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Sink -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Sink">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the sink.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sink</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Siren -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Siren"/>
+    
+
+
+    <!-- http://purl.org/bosh#SmartTagDevice -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SmartTagDevice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Device"/>
+        <rdfs:comment xml:lang="en">Device that can redirect to a resource with information (i.e. RFID, NFC, QR-codes, bar-codes).</rdfs:comment>
+        <rdfs:label xml:lang="en">Tagging Device</rdfs:label>
+        <skos:altLabel xml:lang="en">Tag Device</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SmartWasteBin -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SmartWasteBin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#WasteBin"/>
+        <rdfs:comment xml:lang="en">A smart dustbin that has sensors attached to it to detect the garbage level and perform some action.</rdfs:comment>
+        <rdfs:label xml:lang="en">Smart Dust Bin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Smoke -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Smoke">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Smoke"/>
+        <rdfs:comment xml:lang="en">Smoke cloud that is formed due to fire.</rdfs:comment>
+        <rdfs:label xml:lang="en">Smoke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SmokeDetector -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SmokeDetector">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Device used to detect if there is a fire or the smoke.</rdfs:comment>
+        <rdfs:label xml:lang="en">Smoke Detector</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://casas.wsu.edu/owl/cose.owl#SmokeAlarm"/>
+        <skos:altLabel xml:lang="en">Smoke Sensor</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SolarRadiation -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SolarRadiation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">It is the power per unit area received from the Sun in the form of electromagnetic radiation in the wavelength range of the measuring instrument. (Source Wikipedia).</rdfs:comment>
+        <rdfs:label xml:lang="en">Solar Radiation Measurement, PAR Measurement (Photosynthetically Active Radiation)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SolarRadiationSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SolarRadiationSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Device used to detect Solar Radiation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Solar Radiation Sensor</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/aws#RadiationSensor"/>
+        <rdfs:seeAlso rdf:resource="http://spitfire-project.eu/ontology/ns/Light"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Sound -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Sound">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Measure of noise level in the environment</rdfs:comment>
+        <rdfs:label xml:lang="en">Sound, Noise Level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SoundPressureLevel -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SoundPressureLevel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Sound pressure level is a logarithmic measure of the RMS sound pressure of a sound relative to a reference value, the threshold of hearing. The reference sound pressure was chosen conventionally to correspond to the quietest sound at 1000 Hz that the human ear can detect (20 uPa). In this case, the specific parameter is measured in an open environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sound Pressure Level</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/quantity#soundPressure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SoundSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SoundSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Sensor used to detect Noise level. It can be Sound Sensor, Noise level Sensor, Volume sensor, Microphone</rdfs:comment>
+        <rdfs:label xml:lang="en">Sound Sensor</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://casas.wsu.edu/owl/cose.owl#Microphone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#SoundSource -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#SoundSource">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Source"/>
+        <rdfs:comment xml:lang="en">Source where the sound originated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sound Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Source -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Source">
+        <rdfs:comment xml:lang="en">Environmental Origin of a particular observation. With respect to one kind of Source (Sound source), it can be coming from elevator, washing machine, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#StartCommand -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#StartCommand">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Command"/>
+        <rdfs:comment xml:lang="en">A command to start an actuator.</rdfs:comment>
+        <rdfs:label xml:lang="en">Start Command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#StartState -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#StartState">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#StartStopState"/>
+        <rdfs:comment xml:lang="en">Indicates the Start state of an actuator.</rdfs:comment>
+        <rdfs:label xml:lang="en">Start State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#StartStopState -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#StartStopState">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#State"/>
+        <rdfs:comment xml:lang="en">Indicates the Start or Stop state of an actuator.</rdfs:comment>
+        <rdfs:label xml:lang="en"></rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#State -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#State">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#State"/>
+        <rdfs:comment xml:lang="en">Describes the state of a device, sensor or actuator.</rdfs:comment>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#StayingPeopleCountSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#StayingPeopleCountSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#StayingPeopleCountSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#PeopleCountSensor"/>
+        <rdfs:comment xml:lang="en">Device used to count the number of people that stays within an area for more than a threshold of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Staying People Count Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#StopCommand -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#StopCommand">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Command"/>
+        <rdfs:comment xml:lang="en">A command to stop an actuator.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop Command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#StopState -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#StopState">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#StartStopState"/>
+        <rdfs:comment xml:lang="en">Indicates the Stop state of an actuator.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#StorageRoom -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#StorageRoom">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Room"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Storage Room</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Storey -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Storey">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#BuildingEnvironment"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Storey</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Surface -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Surface">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Building"/>
+        <rdfs:comment xml:lang="en">A civil engineering structure like floor, ceiling, wall, balcony etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Surface</rdfs:label>
+        <skos:altLabel xml:lang="en">Building Frame</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Switch -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Switch">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Control"/>
+        <rdfs:comment xml:lang="en">A switch to turn on or off a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#TV -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#TV">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the television.</rdfs:comment>
+        <rdfs:label xml:lang="en">TV</rdfs:label>
+        <skos:altLabel xml:lang="en">Television</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Telephone -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Telephone">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Appliance"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Communication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the Telephone.</rdfs:comment>
+        <rdfs:label xml:lang="en">Telephone</rdfs:label>
+        <skos:altLabel xml:lang="en">Phone</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Temperature -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Temperature">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#Temperature"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">General temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://archive.knoesis.org/research/semsci/application_domain/sem_sensor/ont/sensor-observation.owlTemperatureProperty"/>
+        <rdfs:seeAlso rdf:resource="http://openiot.eu/ontology/ns/Temperature"/>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/aws#air_temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#TemperatureSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Temperature sensor is an instrument used for measuring the temperature in an environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature Sensor</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/saref#TemperatureSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#TemperatureWasteContainer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#TemperatureWasteContainer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Temperature"/>
+        <rdfs:comment xml:lang="en">The temperature of the air that would be indicated by a thermometer exposed to the air inside a waste container.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature Waste Container</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Tesla -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Tesla">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It is the SI unit of magnetic flux density.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tesla</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Thermometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Thermometer">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#Thermometer"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A device to measure the temperature in a room or outside.</rdfs:comment>
+        <rdfs:label xml:lang="en">Thermometer</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://casas.wsu.edu/owl/cose.owl#TempuratureSensor"/>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/aws#TemperatureSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Thermostat -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Thermostat">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Control"/>
+        <rdfs:comment xml:lang="en">A device that detects the temperature of a physical system and perform actions to maintain at a desired setpoint.</rdfs:comment>
+        <rdfs:label xml:lang="en">Thermostat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Timestamp -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Timestamp">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Sequence of characters or encoded information identifying when a certain event occurred, usually giving date and time of day, sometimes accurate to a small fraction of a second. This representation should be encoded following ISO8601.</rdfs:comment>
+        <rdfs:label xml:lang="en">Timestamp</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/2.3/propTime.owl#Timestamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Tonne -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Tonne">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Gram"/>
+        <rdfs:comment xml:lang="en">It is a non-SI metric unit of mass equal to 1,000 kilograms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tonne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#TouchSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#TouchSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device that captures and records physical touch or embrace on a device and/or object.</rdfs:comment>
+        <rdfs:label xml:lang="en">Touch Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#UltrasonicSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#UltrasonicSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#UltrasonicSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Ultrasonic sensors are used to deduce human posture in smart home for example.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ultrasonic Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Unit -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Unit">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">A Unit is an abstract classifier that represents the concept of measurement unit that is defined as real scalar quantity, defined and adopted by convention, with which any other quantity of the same kind can be compared to express the ratio of the two quantities as a number</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#VOCSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#VOCSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#GaseousPollutionSensor"/>
+        <rdfs:comment xml:lang="en">Sensor that detects levels of Volatile Organic Components (VOC) in the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volatile Organic Compound (VOC) Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Ventilation -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Ventilation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically open/close the ventilation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ventilation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#VoiceCommand -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#VoiceCommand">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Command"/>
+        <rdfs:comment xml:lang="en">A voice command to control a voice controlled system or environment, such as a smart home.</rdfs:comment>
+        <rdfs:label xml:lang="en">Voice Command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#VoiceCommandController -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#VoiceCommandController">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#VoiceCommandController"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:comment xml:lang="en">An actuating device called  that allows to semi-control the environment of the Voice Command Sensor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Voice Command Controller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#VoiceCommandSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#VoiceCommandSensor">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#VoiceCommandSensor"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Sensor that uses automatic speech recognition technology to match or reject a recorded voice command according to a specified set of available voice commands.</rdfs:comment>
+        <rdfs:label xml:lang="en">Voice Command Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Volt -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Volt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">The SI unit of electromotive force, the difference of potential that would carry one ampere of current against one ohm resistance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volt</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#volt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Voltage -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Voltage">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">An electromotive force or potential difference expressed in volts (Source Google).</rdfs:comment>
+        <rdfs:label xml:lang="en">Voltage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#VoltageSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#VoltageSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Device which can measure the difference in electric potential energy between two points per unit electric charge.</rdfs:comment>
+        <rdfs:label xml:lang="en">Voltage Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Wall -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Wall">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Surface"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Wall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WashingMachine -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WashingMachine">
+        <owl:equivalentClass rdf:resource="http://purl.org/iot/vocab/m3-lite#WashingMachine"/>
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#WashingMachine"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically switch on/off the washing machine.</rdfs:comment>
+        <rdfs:label xml:lang="en">Washing Machine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WasteBin -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WasteBin">
+        <rdfs:comment xml:lang="en">A waste bin generally used to collect garbage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Waste Bin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WaterConductivitySensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WaterConductivitySensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ConductivitySensor"/>
+        <rdfs:comment xml:lang="en">Device used to measure the conductivity of water.</rdfs:comment>
+        <rdfs:label xml:lang="en">Water Conductivity Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WaterLevel -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WaterLevel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">The height reached by the water in a reservoir, river, storage tank, or similar.</rdfs:comment>
+        <rdfs:label xml:lang="en">Water Level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WaterNH4IonSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WaterNH4IonSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Sensor used to measure NH4 concentration level in the water.</rdfs:comment>
+        <rdfs:label xml:lang="en">Water NH4 Ion Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WaterNO3IonSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WaterNO3IonSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Sensor used to measure NO3 concentration level in the water.</rdfs:comment>
+        <rdfs:label xml:lang="en">Water NO3 Ion Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WaterO2IonSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WaterO2IonSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#SensingDevice"/>
+        <rdfs:comment xml:lang="en">Sensor used to measure O2 concentration level in the water.</rdfs:comment>
+        <rdfs:label xml:lang="en">Water O2 Ion Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WaterPHSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WaterPHSensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#PHSensor"/>
+        <rdfs:comment xml:lang="en">Device used to detect PH level of water.</rdfs:comment>
+        <rdfs:label xml:lang="en">Water PH Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WaterTemperature -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WaterTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Temperature"/>
+        <rdfs:comment xml:lang="en">Sea surface temperature (SST) is the water temperature close to the ocean&apos;s surface.</rdfs:comment>
+        <rdfs:label xml:lang="en">Water Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WaterThermometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WaterThermometer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Thermometer"/>
+        <rdfs:comment xml:lang="en">This sensor reports Water temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Water Thermometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Watt -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Watt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It is the SI unit of power, equivalent to one joule per second, corresponding to the rate of consumption of energy in an electric circuit where the potential difference is one volt and the current one ampere.</rdfs:comment>
+        <rdfs:label xml:lang="en">Watt (W)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#watt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WattPerSquareMetre -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WattPerSquareMetre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#Unit"/>
+        <rdfs:comment xml:lang="en">It is the SI unit for radiative and other energy fluxes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Watt Per Square Metre, Watt Per Square Meter</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/unit#wattPerSquareMetre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Weight -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Weight">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">A body&apos;s relative mass or the quantity of matter contained by it, giving rise to a downward force; the heaviness of a person or thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">Weight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#Window -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#Window">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#ActuatingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/bosh#hasDomainOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/bosh#BuildingAutomation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator to automatically open/close the window.</rdfs:comment>
+        <rdfs:label xml:lang="en">Window</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WindowStatus -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WindowStatus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#QuantityKind"/>
+        <rdfs:comment xml:lang="en">Describes if a window is OPEN or CLOSED.</rdfs:comment>
+        <rdfs:label xml:lang="en">Window Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#WirelessComponent -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#WirelessComponent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#NetworkComponent"/>
+        <rdfs:comment xml:lang="en">A network device that can send/receive packets using wireless protocols.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wireless Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/bosh#ZigbeeComponent -->
+
+
+    <owl:Class rdf:about="http://purl.org/bosh#ZigbeeComponent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/bosh#WirelessComponent"/>
+        <rdfs:comment xml:lang="en">A Zigbee device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Zigbee Component</rdfs:label>
+        <skos:altLabel xml:lang="en">Zigbee</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Accelerometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Accelerometer"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#AirConditioner -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#AirConditioner"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#AirPollutantSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#AirPollutantSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#AlarmSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#AlarmSystem"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#AtmosphericPressureSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#AtmosphericPressureSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#BoardThermometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#BoardThermometer"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Boiler -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Boiler"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#BuildingAutomation -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#BuildingAutomation"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#CO2Sensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#CO2Sensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#COSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#COSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#CoffeeMachine -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#CoffeeMachine"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Computer -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Computer"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#ConductivitySensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#ConductivitySensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Cupboard -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Cupboard"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Curtain -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Curtain"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#DeltaDewPointSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#DeltaDewPointSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#DewPointSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#DewPointSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#DishWasher -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#DishWasher"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#DistanceSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#DistanceSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#DomainOfInterest -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#DomainOfInterest"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Door -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Door"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#DoorStateSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#DoorStateSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Drawer -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Drawer"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#ElectricalSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#ElectricalSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#EnergyMeter -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#EnergyMeter"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Environment -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Environment"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#FallDetector -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#FallDetector"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Fan -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Fan"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Freezer -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Freezer"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#FrequencySensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#FrequencySensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#GPSSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#GPSSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#GasDetector -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#GasDetector"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#GaseousPollutantSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#GaseousPollutantSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#GyroscopeSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#GyroscopeSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Heating -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Heating"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Hydrophone -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Hydrophone"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#ImageSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#ImageSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Lamp -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Lamp"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#LightSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#LightSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Magnetometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Magnetometer"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Microwave -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Microwave"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#NFC -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#NFC"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#PeopleFlowCountSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#PeopleFlowCountSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#PeopleStayDurationSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#PeopleStayDurationSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#PresenceDetector -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#PresenceDetector"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#PressureSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#PressureSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Seismometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Seismometer"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#ShakeSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#ShakeSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#StayingPeopleCountSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#StayingPeopleCountSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#Thermometer -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#Thermometer"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#UltrasonicSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#UltrasonicSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#VoiceCommandController -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#VoiceCommandController"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#VoiceCommandSensor -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#VoiceCommandSensor"/>
+    
+
+
+    <!-- http://purl.org/iot/vocab/m3-lite#WashingMachine -->
+
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/m3-lite#WashingMachine"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#class -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#class"/>
+    
+
+
+    <!-- https://w3id.org/saref#Actuator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Actuator"/>
+    
+
+
+    <!-- https://w3id.org/saref#Appliance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Appliance"/>
+    
+
+
+    <!-- https://w3id.org/saref#Device -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Device"/>
+    
+
+
+    <!-- https://w3id.org/saref#EnergyMeter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#EnergyMeter"/>
+    
+
+
+    <!-- https://w3id.org/saref#Gas -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Gas"/>
+    
+
+
+    <!-- https://w3id.org/saref#HVAC -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#HVAC"/>
+    
+
+
+    <!-- https://w3id.org/saref#Humidity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Humidity"/>
+    
+
+
+    <!-- https://w3id.org/saref#Measurement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Measurement"/>
+    
+
+
+    <!-- https://w3id.org/saref#Meter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Meter"/>
+    
+
+
+    <!-- https://w3id.org/saref#Power -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Power"/>
+    
+
+
+    <!-- https://w3id.org/saref#Sensor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Sensor"/>
+    
+
+
+    <!-- https://w3id.org/saref#Smoke -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Smoke"/>
+    
+
+
+    <!-- https://w3id.org/saref#State -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#State"/>
+    
+
+
+    <!-- https://w3id.org/saref#Temperature -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Temperature"/>
+    
+
+
+    <!-- https://w3id.org/saref#UnitOfMeasure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#UnitOfMeasure"/>
+    
+
+
+    <!-- https://w3id.org/saref#WashingMachine -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#WashingMachine"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/bosh#Siren -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/bosh#Siren">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://purl.org/bosh#Siren">
+        <rdfs:comment xml:lang="en">A device in which compressed air or steam is driven against a rotating perforated disk to create a loud, often wailing sound as a signal or warning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Siren</rdfs:label>
+        <skos:altLabel xml:lang="en">Alarm</skos:altLabel>
+        <skos:altLabel xml:lang="en">Danger Sound</skos:altLabel>
+        <skos:altLabel xml:lang="en">Warning Sound</skos:altLabel>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+
